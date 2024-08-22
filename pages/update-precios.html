@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Precios de Materiales</title>
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+    <h1>Actualizar Precios de Materiales</h1>
+
+    <div class="material-price-update-container" id="price-update-container">
+        <!-- Los campos de precios se generarán dinámicamente aquí -->
+    </div>
+
+    <button id="save-prices-btn">Guardar Precios</button>
+
+    <h2>Añadir Nuevo Material</h2>
+    <form id="add-material-form">
+        <label for="nuevo-material-nombre">Nombre del Material:</label>
+        <input type="text" id="nuevo-material-nombre" required>
+
+        <label for="nuevo-material-precio">Precio Inicial:</label>
+        <input type="number" id="nuevo-material-precio" step="0.01" required>
+
+        <button type="submit">Añadir Material</button>
+    </form>
+
+    <script src="../update-precios.js"></script>
+</body>
+
+</html>
