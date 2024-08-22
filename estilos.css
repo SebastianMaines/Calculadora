@@ -9,24 +9,83 @@ body {
     padding: 0;
 }
 
-/* Estilos del Navbar */
+/* Estilo para el Navbar */
 .navbar {
     background-color: #FF98A5;
-    /* Color principal de tu página */
+    /* Color principal */
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar el navbar */
 }
 
 .navbar .navbar-brand {
     color: white;
-    font-size: 24px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar .navbar-brand:hover {
+    color: #f5f5f5;
+    /* Un ligero cambio de color en hover */
 }
 
 .navbar .nav-link {
     color: white;
     font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar .nav-link:hover {
     color: #f5f5f5;
+    /* Efecto hover en los enlaces */
+}
+
+.navbar .nav-link.active {
+    color: #fff;
+    /* Color blanco para el enlace activo */
+    background-color: #ff6578;
+    /* Color de fondo para el enlace activo */
+    border-radius: 20px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%280, 0, 0, 0.5%29" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* Sombra debajo del navbar cuando se desplaza */
+.navbar.fixed-top {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.navbar.fixed-top.scrolled {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    /* Mayor sombra cuando se desplaza */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar .nav-link {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 22px;
+    }
 }
 
 /* Estilo de encabezados */

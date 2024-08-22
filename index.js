@@ -126,3 +126,12 @@ document.getElementById('calculate-costs-btn').addEventListener('click', () => {
     document.getElementById('precio-venta').innerText = `Precio de Venta: $${precioVenta.toFixed(2)}`;
     document.getElementById('ganancia').innerText = `Ganancia: $${ganancia.toFixed(2)}`;
 });
+
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
